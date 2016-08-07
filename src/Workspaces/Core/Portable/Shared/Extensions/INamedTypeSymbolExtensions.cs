@@ -374,9 +374,8 @@ namespace Microsoft.CodeAnalysis.Shared.Extensions
             ISymbol within)
         {
             var systemAttributeType = compilation.AttributeType();
-            //TODO there is almost certainly a standard place to get the comparer from
+            
             HashSet<string> propertyNames = new HashSet<string>(StringComparer.Ordinal);
-
             foreach (var type in attributeSymbol.GetBaseTypesAndThis())
             {
                 if (type.Equals(systemAttributeType))

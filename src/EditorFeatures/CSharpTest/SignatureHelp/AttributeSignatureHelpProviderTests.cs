@@ -355,7 +355,8 @@ class D
             await TestAsync(markup, expectedOrderedItems, usePreviousCharAsTrigger: false);
         }
 
-        [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp),Trait("a","b")]
+        [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+        [WorkItem(12544, "https://github.com/dotnet/roslyn/issues/12544")]
         public async Task TestAttributeWithOverriddenAndNewProperties()
         {
             var markup = @"
